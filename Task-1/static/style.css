@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #172554;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: #172554;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar span {
+    color: #cbd5e1;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tagline {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.heading h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.heading h1 span {
+    color: #2563eb;
+}
+
+.description {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.translator {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+.language-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.language-select {
+    flex: 1;
+}
+
+.language-select label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+.swap-btn {
+    margin-top: 25px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.text-areas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.text-box {
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 210px;
+}
+
+textarea {
+    width: 100%;
+    height: 155px;
+    padding: 18px;
+    border: none;
+    outline: none;
+    resize: vertical;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.output-text {
+    min-height: 155px;
+    padding: 18px;
+    color: #334155;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.text-footer {
+    padding: 12px 15px;
+    background: #f8fafc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.text-footer button {
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.translate-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-top: 25px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.translate-btn:hover {
+    background: #1d4ed8;
+}
+
+.translate-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.status {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #2563eb;
+}
+
+footer {
+    text-align: center;
+    margin-top: 45px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Responsive design */
+
+@media (max-width: 700px) {
+
+    .heading h1 {
+        font-size: 34px;
+    }
+
+    .text-areas {
+        grid-template-columns: 1fr;
+    }
+
+    .language-bar {
+        gap: 10px;
+    }
+
+    .translator {
+        padding: 18px;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .language-bar {
+        flex-wrap: wrap;
+    }
+
+    .language-select {
+        min-width: 100%;
+    }
+
+    .swap-btn {
+        margin: 0 auto;
+    }
+}
+
+.output-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.output-actions button {
+    border: none;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.output-actions button:hover {
+    background: #bfdbfe;
+}
